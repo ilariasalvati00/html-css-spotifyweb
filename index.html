@@ -9,15 +9,11 @@
 </head>
 <body>
     <nav>
-        <div>
-            <img src="img/logo.svg" alt="">
-        </div>
         <div class="home-container">
-            <a href=""><i class="fa-solid fa-house"></i> Home</a>
+            <img src="img/logo.svg" alt="">
+            <a class="selected" href=""><i class="fa-solid fa-house"></i> Home</a>
             <a href=""><i class="fa-solid fa-magnifying-glass"></i> Cerca</a>
             <a href=""><i class="fa-solid fa-lines-leaning"></i> La tua libreria</a>
-        </div>
-        <div class="playlist-container">
             <h3>PLAYLIST</h3>
             <a class="plus" href=""><i class="fa-solid fa-plus"></i> Crea Playlist</a>
             <a href="">Nome Playlist</a>
@@ -39,7 +35,7 @@
             <a href="">EFFETTUA L'UPGRADE</a>
         </div>
         <div class="link-nav">
-            <a href="">IN EVIDENZA</a>
+            <a class="highlighted" href="">IN EVIDENZA</a>
             <a href="">PODCAST</a>
             <a href="">CLASSIFICHE</a>
             <a href="">GENERI E MOOD</a>
@@ -107,10 +103,48 @@
                 <img src="img/einaudi.jpeg" alt="">
             </div>
         </div>
-        
     </main>
     <footer>
-
+        <div class="footer-container">
+            <div class="playing-container">
+                <div class="playing-song">
+                    <img src="img/sinister.jpeg" alt="">
+                    <div class="song-content">
+                        <h3>Sinister</h3>
+                        <a>Brano Nome</a>
+                    </div>
+                </div>
+                <div class="song-items">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div> 
+            </div>
+            <div class="song-control-center">
+                <div class="song-control-dashboard">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div> 
+                <div class="player-container">
+                    <p>0.25</p>
+                    <div class="timebar">
+                        <div class="progress"></div>
+                        <div class="dot"></div></div>
+                    <p>4.35</p>
+                </div>
+            </div>
+            <div class="song-control-right">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="timebar">
+                    <div class="progress"></div>
+                    <div class="dot"></div></div>
+                </div>
+            </div> 
+        </div>
     </footer>
 </body>
 </html>

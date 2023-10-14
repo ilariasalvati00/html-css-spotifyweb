@@ -8,6 +8,8 @@
 body{
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
+    overflow-y: hidden;
 }
 /* Inizio nav */
 nav{
@@ -18,17 +20,20 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: hidden;
 }
 
-nav img{
-    padding: 10px;
-}
 
 .home-container{
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    padding-left: 0.5rem;
     
+}
+
+.home-container img{
+    margin-bottom: 2rem;
 }
 
 .home-container a{
@@ -36,24 +41,18 @@ nav img{
     color: #a3a3a3;
     font-size: 12pt;
     margin: 5px;
+    padding: 1px;
+    padding-left: 10px;
 }
 
-.playlist-container{
-   display: flex;
-   flex-direction: column;
-   padding: 1rem;
+.home-container a.selected{
+    border-left: 3px solid green;
 }
 
-.playlist-container a{
-    text-decoration: none;
-    color: #a3a3a3;
-    font-size: 12pt;
-    margin: 5px;
-}
 
-.playlist-container h3{
+.home-container h3{
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
 
 }
 
@@ -65,6 +64,10 @@ nav img{
     padding: 5px;;
 }
 
+.nav-footer{
+    padding-left: 10px;
+}
+
 .nav-footer a, .nav-footer hr, .nav-footer p{
     text-decoration: none;
     color: #a3a3a3;
@@ -73,6 +76,12 @@ nav img{
 
 .nav-footer p{
     color: white;
+}
+
+.fa-arrow-down{
+    border: 1px solid  #a3a3a3;
+    border-radius: 50%;
+    padding: 3px 5px;
 }
 
 .fa-user{
@@ -104,7 +113,19 @@ main{
     text-decoration: none;
     color: #a3a3a3;
     font-size: 11pt;
+    display: inline-block;
+    position:relative;
 }
+
+.highlighted:before {
+    content: '';
+    width: 30px;
+    height: 4px;
+    background: green;
+    position: absolute;
+    bottom: -4px;
+    left: calc(50% - 15px);
+  }
 
 .title-played{
     padding: 1rem;
@@ -127,22 +148,21 @@ main{
 
 .box-playlist h3{
     color: white;
-    display: flex;
-    justify-content: center;
+    font-size: 10pt;
+    text-align: center;
 }
 
 .box-playlist p{
     color: #a3a3a3;
     font-size: 10pt;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .title-played h3{
     color: white;
 }
 .header{
-    height: 100px;
+    height: 70px;
     background-color: #080b12;
     display: flex;
     justify-content: flex-end;
@@ -157,6 +177,11 @@ main{
   border-radius: 20px;
   font-size: 10pt;
   border: 1px solid white;
+  margin-right: 10px;
+}
+
+.header a:hover{
+    transform: scale(1.1);
 }
 
 .radar h3, .radar p{
@@ -193,6 +218,146 @@ main{
 footer{
     width: 100vw;
     height: 100px;
-    background-color: blue;
+    background-color: #282828;
 }
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container img{
+    padding: 1rem;
+    height: 70px;
+}
+
+.song-content{
+    padding: 2rem 0;
+    color: white;
+}
+
+.song-content a{
+    color: #a3a3a3;
+    font-size: 10pt;
+}
+
+.song-content a:hover{
+    text-decoration:underline;
+}
+
+.song-items{
+padding: 3rem 2rem;
+color: grey;
+}
+
+.song-items i{
+    margin: 3px;
+}
+
+.song-control-center{
+    padding: 1rem;
+    color: white;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.song-control-center i{
+    margin: 15px;
+}
+
+.fa-play{
+    border: solid 2px white;
+    border-radius: 50%;
+    padding: 4px;
+    padding-left: 6px;
+}
+
+.fa-play:hover{
+    transform: scale(1.2);
+}
+
+.playing-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playing-song{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-container{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.player-container p{
+    width: 50px;
+    padding: 0 10px;
+}
+
+.timebar{
+    width: calc(100% - 60px);
+    height: 4px;
+    background-color:#a3a3a3;
+    border-radius: 5px;
+    position:relative;
+}
+
+.progress{
+    background-color: white;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+}
+
+.dot{
+    display: none;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    bottom: -2px;
+    left: 20%;
+}
+
+.timebar:hover .dot{
+    display: initial;
+}
+
+.timebar:hover .progress{
+    background-color: green;
+}
+
+.song-control-right{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-control-right i{
+    margin: 10px;
+    color: white;
+}
+
+.song-control-right .timebar{
+    width: 100px;
+}
+
+a.selected, a:hover, i:hover{
+    color:white;
+}
+
+
 
