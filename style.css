@@ -63,6 +63,12 @@ nav img{
     margin: 5px;
 }
 
+.playlist-container h3{
+    color: white;
+    padding: 1rem 0;
+
+}
+
 .plus i{
     display: inline-block;
     background-color: #a3a3a3;
