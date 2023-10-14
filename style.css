@@ -17,6 +17,7 @@ nav{
     display: inline;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 nav img{
@@ -63,15 +64,83 @@ nav img{
     color: #080b12;
     padding: 5px;;
 }
+
+.nav-footer a, .nav-footer hr, .nav-footer p{
+    text-decoration: none;
+    color: #a3a3a3;
+    margin: 8px;
+}
+
+.nav-footer p{
+    color: white;
+}
+
+.fa-user{
+    background-color: #a3a3a3;
+    padding: 5px;
+    border-radius: 50%;
+}
 /* Fine nav */
 
 /* Inizio main */
 main{
     width:85%;
     height: calc(100vh - 100px);
-    background-color: grey;
+    background-color: #141922;
+    overflow-y: scroll;
 }
 
+.link-nav{
+    height: 40px;
+    background-color: #141922;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-nav a{
+    margin: 5px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 11pt;
+}
+
+.title-played{
+    padding: 1rem;
+}
+
+.played-container{
+    display: flex;
+}
+
+.box-playlist{
+    width:16%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.box-playlist img, .box-playlist h3, .box-playlist p{
+    margin: 2px;
+}
+
+.box-playlist h3{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.box-playlist p{
+    color: #a3a3a3;
+    font-size: 10pt;
+    display: flex;
+    justify-content: center;
+}
+
+.title-played h3{
+    color: white;
+}
 .header{
     height: 100px;
     background-color: #080b12;
@@ -94,4 +163,33 @@ footer{
     width: 100vw;
     height: 100px;
     background-color: blue;
+}
+
+.radar h3, .radar p{
+    margin: 10px;
+}
+
+.radar h3{
+    color: white;
+}
+
+.radar p{
+    color: #a3a3a3;
+    font-size: 10pt;
+}
+
+.round-container{
+    display: flex;
+}
+
+.round-playlist{
+    padding-left: 0;
+    padding-right: 0;
+    width: 15%;
+    margin-right: 10px;
+}
+
+.round-playlist img{
+    width: 100%;
+    border-radius: 50%;
 }
